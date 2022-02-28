@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alien Game</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="heading">Alien Ship Invaders</h1>
+    <p class="intro">
+      Can you defeat the alien invaders? Click "shoot" to attack a ship. You win if the Mother Ship loses all their points or all ships reach 0 points.
+    </p>
+
+    <div class="container">
+      <div class="mother">
+        <h1 class="mothership" id="mother">MOTHER SHIP</h1>
+      </div> 
+      <div class="defence">
+        <h1 class="defenceship" id="defence1">DEFENCE SHIP</h1>
+        <h1 class="defenceship" id="defence2">DEFENCE SHIP</h1>
+        <h1 class="defenceship" id="defence3">DEFENCE SHIP</h1>
+        <h1 class="defenceship" id="defence4">DEFENCE SHIP</h1>
+        <h1 class="defenceship" id="defence5">DEFENCE SHIP</h1> 
+      </div>
+       <div class="attack">
+        <h1 class="attackship" id="attack1">ATTACK SHIP</h1>
+        <h1 class="attackship" id="attack2">ATTACK SHIP</h1>
+        <h1 class="attackship" id="attack3">ATTACK SHIP</h1>
+        <h1 class="attackship" id="attack4">ATTACK SHIP</h1>
+ 
+        <h1 class="attackship" id="attack5">ATTACK SHIP</h1>
+        <h1 class="attackship" id="attack6">ATTACK SHIP</h1>
+        <h1 class="attackship" id="attack7">ATTACK SHIP</h1>
+        <h1 class="attackship" id="attack8">ATTACK SHIP</h1> </div>
+      </div>
+    </div>
+    <div class="button-container"> 
+
+
+      <button class="shoot-button">SHOOT</button>
+    </div>
+
+    <div class="game-over hidden">
+      <h2>Well done, you defeated the alien ships!</h2>
+      <div class="restart-button">
+        <button class="restart-game-button">Restart Game</button>
+      </div>
+    </div>
+    
+
+    <div class="message"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

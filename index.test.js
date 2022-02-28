@@ -1,0 +1,1 @@
+import { gameOver } from "./script.js";

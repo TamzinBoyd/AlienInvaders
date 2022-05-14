@@ -18,7 +18,6 @@ let messageToPlayer = document.querySelector(".message");
 let randomShip;
 let randomHtml;
 
-// create objects for each ship & push into an array
 let motherShip;
 let defenceShip;
 let defenceShip2;
@@ -68,9 +67,7 @@ const loadGame = () => {
     attackShip8
   );
 };
-
 loadGame();
-
 // get each ship's ID from HTLML & push into array
 const motherHtml = document.getElementById("mother");
 const attackHtml1 = document.getElementById("attack1");
@@ -105,7 +102,6 @@ htmlArr.push(
   defenceHtml5
 );
 
-// shoot button //////////////////////////////////////////////////////////////////////////
 const shootShip = () => {
   shootButton.classList.add("shoot");
   if (
@@ -122,9 +118,7 @@ const shootShip = () => {
 };
 
 const hitShip = () => {
-  // choose random ship from array on each hit
   randomShip = shipArr[Math.floor(Math.random() * shipArr.length)];
-
   // if ship has already been sunk (has 0 points) then hit another ship
   if (randomShip.currentPoints <= 0) {
     hitShip();
@@ -133,7 +127,6 @@ const hitShip = () => {
   } else {
     messageToPlayer.innerHTML = `${randomShip.shipType} ship has been hit!`;
     randomShip.deductPoints();
-    console.log(motherShip.currentPoints);
 
     if (randomShip.currentPoints <= 0) {
       hideShip();
@@ -145,7 +138,6 @@ const hitShip = () => {
 // hiding the HTML elements of the ship once sunk (currently in an array) ////////////////
 const hideShip = () => {
   randomHtml = htmlArr[Math.floor(Math.random() * htmlArr.length)];
-
   // if ship is already sunk then choose another ship in array. Mothership N/A as 0 points means game over
   if (randomHtml.classList.contains("sunk-ship")) {
     hideShip();
@@ -156,13 +148,11 @@ const hideShip = () => {
   }
 };
 
-// show game over message and hide shoot button //////////////////////////////////////////
 const gameOver = () => {
   gameOverMessage.classList.remove("hidden");
   shootButton.classList.add("hidden");
 };
 
-// restart button //////////////////////////////////////////////////////////////
 const restartClasses = () => {
   htmlArr.forEach((element) => {
     element.classList.remove("sunk-ship");
